@@ -44,8 +44,6 @@ The API supports the following functionalities:
 
 ## 📚 API Endpoints
 
-## 📚 API Endpoints
-
 ### 🏟 Matches
 
 - `GET /match` - Get all matches  
