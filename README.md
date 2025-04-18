@@ -44,49 +44,45 @@ The API supports the following functionalities:
 
 ## 📚 API Endpoints
 
+## 📚 API Endpoints
+
 ### 🏟 Matches
 
-- `GET /api/matches` - Get all matches  
-- `GET /api/matches/date/{date}` - Get matches on a specific date  
-- `GET /api/matches/{id}` - Get match by ID  
-- `GET /api/matches/{id}/teams` - Get teams for a specific match  
-- `GET /api/matches/{id}/stadium` - Get stadium for a specific match  
-- `POST /api/matches` - Create a new match  
-- `PUT /api/matches/{id}` - Update an existing match  
-- `DELETE /api/matches/{id}` - Delete a match  
-- `DELETE /api/matches/past` - Delete all past matches  
+- `GET /match` - Get all matches  
+- `GET /match/dateMatch/{dateMatch}` - Get matches on a specific date  
+- `GET /match/{id}/stades` - Get stadium for a specific match  
+- `POST /match` - Create a new match  
+- `PUT /match` - Update an existing match  
+- `DELETE /match/{id}` - Delete a match  
 
-### 🛡 Teams
+---
 
-- `GET /api/teams` - Get all teams  
-- `GET /api/teams/country/{country}` - Get teams from a specific country  
-- `GET /api/teams/{name}` - Get team by name  
-- `GET /api/teams/{id}/players` - Get all players of a team  
-- `GET /api/teams/{name}/players/{position}` - Get players with specific position from a team  
-- `POST /api/teams` - Create a new team  
-- `PUT /api/teams/{id}` - Update a team  
-- `DELETE /api/teams/{id}` - Delete a team  
+### 🛡 Teams (*Équipes*)
 
-### 🧍 Players
+- `GET /equipe` - Get all teams  
+- `GET /equipe/{id}` - Get team by ID  
+- `GET /equipe/pays/{pays}` - Get teams from a specific country  
+- `GET /equipe/{id}/joueur` - Get all players of a team  
+- `POST /equipe` - Create a new team  
+- `PUT /equipe` - Update an existing team  
+- `DELETE /equipe/{id}` - Delete a team  
 
-- `GET /api/players` - Get all players  
-- `GET /api/players/{id}` - Get player by ID  
-- `POST /api/players` - Create a new player  
-- `PUT /api/players/{id}` - Update a player  
-- `DELETE /api/players/{id}` - Delete a player  
+---
 
-### 🏟 Stadiums
+### 🧍 Players (*Joueurs*)
 
-- `GET /api/stadiums` - Get all stadiums  
-- `GET /api/stadiums/{id}` - Get stadium by ID  
-- `POST /api/stadiums` - Create a new stadium  
-- `PUT /api/stadiums/{id}` - Update a stadium  
-- `DELETE /api/stadiums/{id}` - Delete a stadium  
+- `GET /joueur` - Get all players  
+- `POST /joueur` - Create a new player  
+- `PUT /joueur` - Update an existing player  
+- `DELETE /joueur/{id}` - Delete a player  
 
-### 🧑‍⚖️ Referees
+---
 
-- `GET /api/referees` - Get all referees  
-- `GET /api/referees/{id}` - Get referee by ID  
-- `POST /api/referees` - Create a new referee  
-- `PUT /api/referees/{id}` - Update a referee  
-- `DELETE /api/referees/{id}` - Delete a referee  
+### 🏟 Stadiums (*Stades*)
+
+- `GET /stade` - Get all stadiums  
+- `POST /stade` - Create a new stadium  
+- `PUT /stade` - Update an existing stadium  
+- `DELETE /stade/{id}` - Delete a stadium  
+- `POST /stade/{idStade}/match` - Add a match to a stadium  
+- `GET /stade/{idStade}/match` - Get all matches for a stadium  
